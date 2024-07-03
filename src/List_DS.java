@@ -41,5 +41,16 @@ public class List_DS {
         System.out.println("------------------------");
         Collections.sort(li);
         System.out.println(li); //[0, 4, 5, 6, 12]
+        System.out.println("------------------------");
+        List<Student> studentList = new ArrayList<>();
+        studentList.add(new Student("Akhil", 23, "MTech"));
+        studentList.add(new Student("Aakash", 23, "MDes"));
+        studentList.add(new Student("Abilash", 23, "BTech"));
+        studentList.isEmpty(); //false
+        System.out.println("------------------------");
+        //looping and filtering from the list of objets
+        Optional<Student> filter = studentList.stream().filter(i-> i.name.equalsIgnoreCase("Akhil")).findFirst();
+        System.out.println("------------------------");
+
     }
 }
